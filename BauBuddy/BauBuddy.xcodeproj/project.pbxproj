@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE7FB8372A018AAB00BB9E23 /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */; };
 		AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */; };
 		AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */; };
 		AE8E659F2A01109E00DFB1A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659E2A01109E00DFB1A9 /* LoginViewController.swift */; };
@@ -23,9 +24,21 @@
 		AE8E65C72A013C1800DFB1A9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C62A013C1800DFB1A9 /* Authentication.swift */; };
 		AE8E65C92A013CE700DFB1A9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */; };
 		AECEBB572A016E0200047F5B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB562A016E0200047F5B /* ErrorResponse.swift */; };
+		AECEBB5A2A0172C000047F5B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB592A0172C000047F5B /* KeychainManager.swift */; };
+		AECEBB5D2A01746500047F5B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = AECEBB5C2A01746500047F5B /* KeychainAccess */; };
+		AECEBB5F2A0177BC00047F5B /* TaskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB5E2A0177BB00047F5B /* TaskResponse.swift */; };
+		AECEBB622A0179DE00047F5B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB612A0179DE00047F5B /* TasksViewController.swift */; };
+		AECEBB642A0179E900047F5B /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB632A0179E900047F5B /* TasksViewModel.swift */; };
+		AECEBB662A0179F800047F5B /* TasksScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB652A0179F800047F5B /* TasksScreen.storyboard */; };
+		AECEBB692A017A1800047F5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB682A017A1800047F5B /* ProfileViewController.swift */; };
+		AECEBB6B2A017A2000047F5B /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB6A2A017A2000047F5B /* ProfileViewModel.swift */; };
+		AECEBB6D2A017A2A00047F5B /* ProfileScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB6C2A017A2A00047F5B /* ProfileScreen.storyboard */; };
+		AECEBB6F2A017CE400047F5B /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB6E2A017CE400047F5B /* TaskService.swift */; };
+		AECEBB712A017D7B00047F5B /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB702A017D7B00047F5B /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
 		AE8E65972A01109E00DFB1A9 /* BauBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BauBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +57,16 @@
 		AE8E65C62A013C1800DFB1A9 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		AECEBB562A016E0200047F5B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		AECEBB592A0172C000047F5B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		AECEBB5E2A0177BB00047F5B /* TaskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResponse.swift; sourceTree = "<group>"; };
+		AECEBB612A0179DE00047F5B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		AECEBB632A0179E900047F5B /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		AECEBB652A0179F800047F5B /* TasksScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TasksScreen.storyboard; sourceTree = "<group>"; };
+		AECEBB682A017A1800047F5B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AECEBB6A2A017A2000047F5B /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		AECEBB6C2A017A2A00047F5B /* ProfileScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileScreen.storyboard; sourceTree = "<group>"; };
+		AECEBB6E2A017CE400047F5B /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		AECEBB702A017D7B00047F5B /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECEBB5D2A01746500047F5B /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +104,7 @@
 				AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */,
 				AE8E65B62A01164D00DFB1A9 /* AppConstants.swift */,
 				AE8E65A82A0110A100DFB1A9 /* Info.plist */,
+				AECEBB582A01729500047F5B /* Managers */,
 				AE8E65BE2A0117EB00DFB1A9 /* Models */,
 				AE8E65AF2A01157A00DFB1A9 /* API */,
 				AE8E65B02A01159000DFB1A9 /* Screens */,
@@ -95,6 +120,7 @@
 				AE8E65B12A0115D200DFB1A9 /* APIRequest.swift */,
 				AE8E65B42A01160800DFB1A9 /* APIManager.swift */,
 				AE8E65B82A0116D700DFB1A9 /* LoginService.swift */,
+				AECEBB6E2A017CE400047F5B /* TaskService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -102,6 +128,9 @@
 		AE8E65B02A01159000DFB1A9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				AECEBB702A017D7B00047F5B /* TabBar.storyboard */,
+				AECEBB672A017A0300047F5B /* ProfileScreen */,
+				AECEBB602A0179C000047F5B /* TasksScreen */,
 				AE8E65C12A011A8800DFB1A9 /* LoginScreen */,
 			);
 			path = Screens;
@@ -115,6 +144,7 @@
 				AE8E65C62A013C1800DFB1A9 /* Authentication.swift */,
 				AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */,
 				AECEBB562A016E0200047F5B /* ErrorResponse.swift */,
+				AECEBB5E2A0177BB00047F5B /* TaskResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +157,35 @@
 				AE8E65A02A01109E00DFB1A9 /* LoginScreen.storyboard */,
 			);
 			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		AECEBB582A01729500047F5B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AECEBB592A0172C000047F5B /* KeychainManager.swift */,
+				AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AECEBB602A0179C000047F5B /* TasksScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AECEBB612A0179DE00047F5B /* TasksViewController.swift */,
+				AECEBB632A0179E900047F5B /* TasksViewModel.swift */,
+				AECEBB652A0179F800047F5B /* TasksScreen.storyboard */,
+			);
+			path = TasksScreen;
+			sourceTree = "<group>";
+		};
+		AECEBB672A017A0300047F5B /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AECEBB682A017A1800047F5B /* ProfileViewController.swift */,
+				AECEBB6A2A017A2000047F5B /* ProfileViewModel.swift */,
+				AECEBB6C2A017A2A00047F5B /* ProfileScreen.storyboard */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +204,9 @@
 			dependencies = (
 			);
 			name = BauBuddy;
+			packageProductDependencies = (
+				AECEBB5C2A01746500047F5B /* KeychainAccess */,
+			);
 			productName = BauBuddy;
 			productReference = AE8E65972A01109E00DFB1A9 /* BauBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +235,9 @@
 				Base,
 			);
 			mainGroup = AE8E658E2A01109E00DFB1A9;
+			packageReferences = (
+				AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = AE8E65982A01109E00DFB1A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,6 +255,9 @@
 				AE8E65A72A0110A100DFB1A9 /* LaunchScreen.storyboard in Resources */,
 				AE8E65A42A0110A100DFB1A9 /* Assets.xcassets in Resources */,
 				AE8E65A22A01109E00DFB1A9 /* LoginScreen.storyboard in Resources */,
+				AECEBB6D2A017A2A00047F5B /* ProfileScreen.storyboard in Resources */,
+				AECEBB712A017D7B00047F5B /* TabBar.storyboard in Resources */,
+				AECEBB662A0179F800047F5B /* TasksScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,15 +268,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE7FB8372A018AAB00BB9E23 /* ControllerManager.swift in Sources */,
+				AECEBB6F2A017CE400047F5B /* TaskService.swift in Sources */,
 				AE8E65C02A01180300DFB1A9 /* LoginResponse.swift in Sources */,
+				AECEBB6B2A017A2000047F5B /* ProfileViewModel.swift in Sources */,
+				AECEBB642A0179E900047F5B /* TasksViewModel.swift in Sources */,
 				AE8E659F2A01109E00DFB1A9 /* LoginViewController.swift in Sources */,
 				AE8E65B72A01164D00DFB1A9 /* AppConstants.swift in Sources */,
 				AE8E65C52A0122A200DFB1A9 /* LoginInput.swift in Sources */,
 				AE8E65C92A013CE700DFB1A9 /* UserInfo.swift in Sources */,
+				AECEBB692A017A1800047F5B /* ProfileViewController.swift in Sources */,
 				AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */,
+				AECEBB5F2A0177BC00047F5B /* TaskResponse.swift in Sources */,
 				AE8E65B52A01160800DFB1A9 /* APIManager.swift in Sources */,
 				AE8E65B92A0116D700DFB1A9 /* LoginService.swift in Sources */,
+				AECEBB622A0179DE00047F5B /* TasksViewController.swift in Sources */,
 				AE8E65B22A0115D200DFB1A9 /* APIRequest.swift in Sources */,
+				AECEBB5A2A0172C000047F5B /* KeychainManager.swift in Sources */,
 				AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */,
 				AE8E65C32A011AA700DFB1A9 /* LoginViewModel.swift in Sources */,
 				AE8E65C72A013C1800DFB1A9 /* Authentication.swift in Sources */,
@@ -438,6 +514,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AECEBB5C2A01746500047F5B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE8E658F2A01109E00DFB1A9 /* Project object */;
 }

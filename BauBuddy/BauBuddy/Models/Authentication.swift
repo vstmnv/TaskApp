@@ -8,8 +8,10 @@
 import Foundation
 
 struct Authentication: Decodable {
-	let access_token: String
-	let expires_in: Int
-	let token_type: String
-	let refresh_token: String
+
+	enum CodingKeys: String, CodingKey {
+		case accessToken = "access_token"
+	}
+
+	let accessToken: String
 }

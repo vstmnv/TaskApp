@@ -10,6 +10,7 @@ import Foundation
 class LoginViewModel: ObservableObject {
 
 	@Published private(set) var errorMessage: String?
+	@Published private(set) var isLoading = false
 
 	func login(username: String?, password: String?) {
 		guard let username, !username.isEmpty,
@@ -19,13 +20,17 @@ class LoginViewModel: ObservableObject {
 		}
 
 		let loginService = LoginService()
+		isLoading = true
+
 		loginService.login(username: username, password: password) { [weak self] result in
 			switch result {
 			case .success(let loginResponse):
-				print("Login successful:", loginResponse)
+				KeychainManager.shared.setToken(token: loginResponse.oauth.accessToken)
+				ControllerManager.shared.switchRoot(screen: .home)
 			case .failure(let error):
 				self?.errorMessage = error.localizedDescription
 			}
+			self?.isLoading = false
 		}
 	}
 }
