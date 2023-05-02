@@ -16,9 +16,9 @@ final class ControllerManager {
 		var storyboardName: String {
 			switch self {
 			case .home:
-				return "TabBar"
+				return R.storyboard.tabBar.name
 			case .login:
-				return "LoginScreen"
+				return R.storyboard.loginScreen.name
 			}
 		}
 	}

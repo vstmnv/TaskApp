@@ -7,6 +7,12 @@
 
 import Foundation
 
-class TaskService {
-	
+final class TaskService {
+
+	func getTasks(completion: @escaping (Result<[TaskResponse], Error>) -> Void) {
+		let apiManager = APIManager()
+		let apiRequest = APIRequest<EmptyInput, [TaskResponse]>(path: "v1/tasks/select")
+
+		apiManager.run(request: apiRequest, httpMethod: .get, completion: completion)
+	}
 }

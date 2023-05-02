@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AE7FB8372A018AAB00BB9E23 /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */; };
+		AE7FB8392A01905500BB9E23 /* EmptyInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8382A01905500BB9E23 /* EmptyInput.swift */; };
+		AE7FB83C2A0191ED00BB9E23 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AE7FB83B2A0191ED00BB9E23 /* RswiftLibrary */; };
+		AE7FB8412A01934500BB9E23 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8402A01934500BB9E23 /* TaskCell.swift */; };
+		AE7FB8432A01936F00BB9E23 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8422A01936F00BB9E23 /* TaskCellViewModel.swift */; };
+		AE7FB8462A019AA000BB9E23 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7FB8452A019AA000BB9E23 /* UIColor+Hex.swift */; };
 		AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */; };
 		AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */; };
 		AE8E659F2A01109E00DFB1A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659E2A01109E00DFB1A9 /* LoginViewController.swift */; };
@@ -39,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
+		AE7FB8382A01905500BB9E23 /* EmptyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyInput.swift; sourceTree = "<group>"; };
+		AE7FB8402A01934500BB9E23 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		AE7FB8422A01936F00BB9E23 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		AE7FB8452A019AA000BB9E23 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		AE8E65972A01109E00DFB1A9 /* BauBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BauBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,12 +84,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECEBB5D2A01746500047F5B /* KeychainAccess in Frameworks */,
+				AE7FB83C2A0191ED00BB9E23 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE7FB8442A019A8700BB9E23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE7FB8452A019AA000BB9E23 /* UIColor+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AE8E658E2A01109E00DFB1A9 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,7 @@
 				AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */,
 				AE8E65B62A01164D00DFB1A9 /* AppConstants.swift */,
 				AE8E65A82A0110A100DFB1A9 /* Info.plist */,
+				AE7FB8442A019A8700BB9E23 /* Extensions */,
 				AECEBB582A01729500047F5B /* Managers */,
 				AE8E65BE2A0117EB00DFB1A9 /* Models */,
 				AE8E65AF2A01157A00DFB1A9 /* API */,
@@ -139,6 +158,7 @@
 		AE8E65BE2A0117EB00DFB1A9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AE7FB8382A01905500BB9E23 /* EmptyInput.swift */,
 				AE8E65C42A0122A200DFB1A9 /* LoginInput.swift */,
 				AE8E65BF2A01180300DFB1A9 /* LoginResponse.swift */,
 				AE8E65C62A013C1800DFB1A9 /* Authentication.swift */,
@@ -171,6 +191,8 @@
 		AECEBB602A0179C000047F5B /* TasksScreen */ = {
 			isa = PBXGroup;
 			children = (
+				AE7FB8402A01934500BB9E23 /* TaskCell.swift */,
+				AE7FB8422A01936F00BB9E23 /* TaskCellViewModel.swift */,
 				AECEBB612A0179DE00047F5B /* TasksViewController.swift */,
 				AECEBB632A0179E900047F5B /* TasksViewModel.swift */,
 				AECEBB652A0179F800047F5B /* TasksScreen.storyboard */,
@@ -202,10 +224,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				AE7FB83E2A01924D00BB9E23 /* PBXTargetDependency */,
 			);
 			name = BauBuddy;
 			packageProductDependencies = (
 				AECEBB5C2A01746500047F5B /* KeychainAccess */,
+				AE7FB83B2A0191ED00BB9E23 /* RswiftLibrary */,
 			);
 			productName = BauBuddy;
 			productReference = AE8E65972A01109E00DFB1A9 /* BauBuddy.app */;
@@ -237,6 +261,7 @@
 			mainGroup = AE8E658E2A01109E00DFB1A9;
 			packageReferences = (
 				AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				AE7FB83A2A0191ED00BB9E23 /* XCRemoteSwiftPackageReference "R" */,
 			);
 			productRefGroup = AE8E65982A01109E00DFB1A9 /* Products */;
 			projectDirPath = "";
@@ -277,22 +302,33 @@
 				AE8E65B72A01164D00DFB1A9 /* AppConstants.swift in Sources */,
 				AE8E65C52A0122A200DFB1A9 /* LoginInput.swift in Sources */,
 				AE8E65C92A013CE700DFB1A9 /* UserInfo.swift in Sources */,
+				AE7FB8432A01936F00BB9E23 /* TaskCellViewModel.swift in Sources */,
 				AECEBB692A017A1800047F5B /* ProfileViewController.swift in Sources */,
 				AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */,
 				AECEBB5F2A0177BC00047F5B /* TaskResponse.swift in Sources */,
 				AE8E65B52A01160800DFB1A9 /* APIManager.swift in Sources */,
 				AE8E65B92A0116D700DFB1A9 /* LoginService.swift in Sources */,
+				AE7FB8392A01905500BB9E23 /* EmptyInput.swift in Sources */,
 				AECEBB622A0179DE00047F5B /* TasksViewController.swift in Sources */,
 				AE8E65B22A0115D200DFB1A9 /* APIRequest.swift in Sources */,
 				AECEBB5A2A0172C000047F5B /* KeychainManager.swift in Sources */,
+				AE7FB8462A019AA000BB9E23 /* UIColor+Hex.swift in Sources */,
 				AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */,
 				AE8E65C32A011AA700DFB1A9 /* LoginViewModel.swift in Sources */,
 				AE8E65C72A013C1800DFB1A9 /* Authentication.swift in Sources */,
+				AE7FB8412A01934500BB9E23 /* TaskCell.swift in Sources */,
 				AECEBB572A016E0200047F5B /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE7FB83E2A01924D00BB9E23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = AE7FB83D2A01924D00BB9E23 /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE8E65A02A01109E00DFB1A9 /* LoginScreen.storyboard */ = {
@@ -516,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE7FB83A2A0191ED00BB9E23 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = exactVersion;
+				version = 7.3.2;
+			};
+		};
 		AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -527,6 +571,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE7FB83B2A0191ED00BB9E23 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE7FB83A2A0191ED00BB9E23 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		AE7FB83D2A01924D00BB9E23 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
 		AECEBB5C2A01746500047F5B /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */;

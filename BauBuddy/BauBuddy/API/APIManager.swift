@@ -45,7 +45,7 @@ final class APIManager {
 		let urlWithPathAndQuery = url.appending(path: request.path)
 		var request = URLRequest(url: urlWithPathAndQuery)
 		request.httpMethod = httpMethod.value
-		request.setValue(accessToken, forHTTPHeaderField: Constant.authorizationHeader)
+		request.setValue(KeychainManager.shared.getToken() ?? accessToken, forHTTPHeaderField: Constant.authorizationHeader)
 		request.setValue(Constant.contentType, forHTTPHeaderField: Constant.contentTypeKey)
 		
 		if let input = input {

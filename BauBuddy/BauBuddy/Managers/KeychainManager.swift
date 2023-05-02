@@ -33,6 +33,10 @@ final class KeychainManager {
 	}
 
 	func getToken() -> String? {
-		return keychain[Key.accessToken.rawValue]
+		if let token = keychain[Key.accessToken.rawValue] {
+			return "Bearer \(token)"
+		} else {
+			return nil
+		}
 	}
 }

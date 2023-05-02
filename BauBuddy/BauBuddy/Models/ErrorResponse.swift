@@ -16,5 +16,6 @@ struct ErrorResponse: LocalizedError, Decodable {
 }
 
 struct BauBuddyError: Decodable {
+	let code: Int
 	let message: String
 }
