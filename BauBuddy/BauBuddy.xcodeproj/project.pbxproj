@@ -9,21 +9,41 @@
 /* Begin PBXBuildFile section */
 		AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */; };
 		AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */; };
-		AE8E659F2A01109E00DFB1A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659E2A01109E00DFB1A9 /* ViewController.swift */; };
-		AE8E65A22A01109E00DFB1A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8E65A02A01109E00DFB1A9 /* Main.storyboard */; };
+		AE8E659F2A01109E00DFB1A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E659E2A01109E00DFB1A9 /* LoginViewController.swift */; };
+		AE8E65A22A01109E00DFB1A9 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8E65A02A01109E00DFB1A9 /* LoginScreen.storyboard */; };
 		AE8E65A42A0110A100DFB1A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE8E65A32A0110A100DFB1A9 /* Assets.xcassets */; };
 		AE8E65A72A0110A100DFB1A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8E65A52A0110A100DFB1A9 /* LaunchScreen.storyboard */; };
+		AE8E65B22A0115D200DFB1A9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65B12A0115D200DFB1A9 /* APIRequest.swift */; };
+		AE8E65B52A01160800DFB1A9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65B42A01160800DFB1A9 /* APIManager.swift */; };
+		AE8E65B72A01164D00DFB1A9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65B62A01164D00DFB1A9 /* AppConstants.swift */; };
+		AE8E65B92A0116D700DFB1A9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65B82A0116D700DFB1A9 /* LoginService.swift */; };
+		AE8E65C02A01180300DFB1A9 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65BF2A01180300DFB1A9 /* LoginResponse.swift */; };
+		AE8E65C32A011AA700DFB1A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C22A011AA700DFB1A9 /* LoginViewModel.swift */; };
+		AE8E65C52A0122A200DFB1A9 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C42A0122A200DFB1A9 /* LoginInput.swift */; };
+		AE8E65C72A013C1800DFB1A9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C62A013C1800DFB1A9 /* Authentication.swift */; };
+		AE8E65C92A013CE700DFB1A9 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */; };
+		AECEBB572A016E0200047F5B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB562A016E0200047F5B /* ErrorResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE8E65972A01109E00DFB1A9 /* BauBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BauBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE8E659E2A01109E00DFB1A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AE8E65A12A01109E00DFB1A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE8E659E2A01109E00DFB1A9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE8E65A12A01109E00DFB1A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginScreen.storyboard; sourceTree = "<group>"; };
 		AE8E65A32A0110A100DFB1A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE8E65A62A0110A100DFB1A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE8E65A82A0110A100DFB1A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8E65B12A0115D200DFB1A9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		AE8E65B42A01160800DFB1A9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AE8E65B62A01164D00DFB1A9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		AE8E65B82A0116D700DFB1A9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AE8E65BF2A01180300DFB1A9 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		AE8E65C22A011AA700DFB1A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AE8E65C42A0122A200DFB1A9 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
+		AE8E65C62A013C1800DFB1A9 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		AECEBB562A016E0200047F5B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +78,55 @@
 			children = (
 				AE8E659A2A01109E00DFB1A9 /* AppDelegate.swift */,
 				AE8E659C2A01109E00DFB1A9 /* SceneDelegate.swift */,
-				AE8E659E2A01109E00DFB1A9 /* ViewController.swift */,
-				AE8E65A02A01109E00DFB1A9 /* Main.storyboard */,
+				AE8E65B62A01164D00DFB1A9 /* AppConstants.swift */,
+				AE8E65A82A0110A100DFB1A9 /* Info.plist */,
+				AE8E65BE2A0117EB00DFB1A9 /* Models */,
+				AE8E65AF2A01157A00DFB1A9 /* API */,
+				AE8E65B02A01159000DFB1A9 /* Screens */,
 				AE8E65A32A0110A100DFB1A9 /* Assets.xcassets */,
 				AE8E65A52A0110A100DFB1A9 /* LaunchScreen.storyboard */,
-				AE8E65A82A0110A100DFB1A9 /* Info.plist */,
 			);
 			path = BauBuddy;
+			sourceTree = "<group>";
+		};
+		AE8E65AF2A01157A00DFB1A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E65B12A0115D200DFB1A9 /* APIRequest.swift */,
+				AE8E65B42A01160800DFB1A9 /* APIManager.swift */,
+				AE8E65B82A0116D700DFB1A9 /* LoginService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AE8E65B02A01159000DFB1A9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E65C12A011A8800DFB1A9 /* LoginScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AE8E65BE2A0117EB00DFB1A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E65C42A0122A200DFB1A9 /* LoginInput.swift */,
+				AE8E65BF2A01180300DFB1A9 /* LoginResponse.swift */,
+				AE8E65C62A013C1800DFB1A9 /* Authentication.swift */,
+				AE8E65C82A013CE700DFB1A9 /* UserInfo.swift */,
+				AECEBB562A016E0200047F5B /* ErrorResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE8E65C12A011A8800DFB1A9 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AE8E659E2A01109E00DFB1A9 /* LoginViewController.swift */,
+				AE8E65C22A011AA700DFB1A9 /* LoginViewModel.swift */,
+				AE8E65A02A01109E00DFB1A9 /* LoginScreen.storyboard */,
+			);
+			path = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +189,7 @@
 			files = (
 				AE8E65A72A0110A100DFB1A9 /* LaunchScreen.storyboard in Resources */,
 				AE8E65A42A0110A100DFB1A9 /* Assets.xcassets in Resources */,
-				AE8E65A22A01109E00DFB1A9 /* Main.storyboard in Resources */,
+				AE8E65A22A01109E00DFB1A9 /* LoginScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,21 +200,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE8E659F2A01109E00DFB1A9 /* ViewController.swift in Sources */,
+				AE8E65C02A01180300DFB1A9 /* LoginResponse.swift in Sources */,
+				AE8E659F2A01109E00DFB1A9 /* LoginViewController.swift in Sources */,
+				AE8E65B72A01164D00DFB1A9 /* AppConstants.swift in Sources */,
+				AE8E65C52A0122A200DFB1A9 /* LoginInput.swift in Sources */,
+				AE8E65C92A013CE700DFB1A9 /* UserInfo.swift in Sources */,
 				AE8E659B2A01109E00DFB1A9 /* AppDelegate.swift in Sources */,
+				AE8E65B52A01160800DFB1A9 /* APIManager.swift in Sources */,
+				AE8E65B92A0116D700DFB1A9 /* LoginService.swift in Sources */,
+				AE8E65B22A0115D200DFB1A9 /* APIRequest.swift in Sources */,
 				AE8E659D2A01109E00DFB1A9 /* SceneDelegate.swift in Sources */,
+				AE8E65C32A011AA700DFB1A9 /* LoginViewModel.swift in Sources */,
+				AE8E65C72A013C1800DFB1A9 /* Authentication.swift in Sources */,
+				AECEBB572A016E0200047F5B /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AE8E65A02A01109E00DFB1A9 /* Main.storyboard */ = {
+		AE8E65A02A01109E00DFB1A9 /* LoginScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AE8E65A12A01109E00DFB1A9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = LoginScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		AE8E65A52A0110A100DFB1A9 /* LaunchScreen.storyboard */ = {
@@ -169,7 +241,9 @@
 		AE8E65A92A0110A100DFB1A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_TOKEN = "Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "https://api.baubuddy.de/index.php/login/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -229,7 +303,9 @@
 		AE8E65AA2A0110A100DFB1A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_TOKEN = "Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "https://api.baubuddy.de/index.php/login/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -283,8 +359,10 @@
 		AE8E65AC2A0110A100DFB1A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_TOKEN = "Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.baubuddy.de/dev/index.php/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87DT32ZGT;
@@ -292,7 +370,7 @@
 				INFOPLIST_FILE = BauBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,8 +389,10 @@
 		AE8E65AD2A0110A100DFB1A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ACCESS_TOKEN = "Basic QVBJX0V4cGxvcmVyOjEyMzQ1NmlzQUxhbWVQYXNz";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.baubuddy.de/dev/index.php/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H87DT32ZGT;
@@ -320,7 +400,7 @@
 				INFOPLIST_FILE = BauBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LoginScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
