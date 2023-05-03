@@ -136,12 +136,13 @@
                                 <rect key="frame" x="0.0" y="103" width="390" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="UgB-Rp-GCf" id="K9E-GF-lHd"/>
+                                    <outlet property="delegate" destination="UgB-Rp-GCf" id="86F-6v-z8d"/>
                                 </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kh3-VR-j9U"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kh3-VR-j9U" firstAttribute="trailing" secondItem="zYm-Rs-eSi" secondAttribute="trailing" id="7e7-4a-3cY"/>
                             <constraint firstItem="kzJ-iz-d9t" firstAttribute="leading" secondItem="Kh3-VR-j9U" secondAttribute="leading" id="HnT-E5-5xU"/>
@@ -154,6 +155,9 @@
                             <constraint firstItem="zYm-Rs-eSi" firstAttribute="top" secondItem="3Qn-r3-m9R" secondAttribute="top" id="wIC-Ce-FYx"/>
                             <constraint firstItem="zYm-Rs-eSi" firstAttribute="leading" secondItem="3Qn-r3-m9R" secondAttribute="leading" id="wO6-um-n2F"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cim-Lu-UqV" appends="YES" id="1lj-6H-6Mj"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="building.columns.circle" catalog="system" id="V9c-ha-DyN"/>
                     <navigationItem key="navigationItem" id="d0n-F3-dVM"/>
@@ -164,6 +168,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLY-D6-F9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cim-Lu-UqV">
+                    <connections>
+                        <action selector="tapToDimiss:" destination="UgB-Rp-GCf" id="bfz-mS-dYW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1050.7692307692307" y="-2.1327014218009479"/>
         </scene>

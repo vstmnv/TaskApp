@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TaskResponse: Decodable {
+struct TaskResponse: Codable {
 
 	enum CodingKeys: String, CodingKey {
 		case task

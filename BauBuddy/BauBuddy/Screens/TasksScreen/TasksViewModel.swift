@@ -9,7 +9,18 @@ import Foundation
 
 final class TasksViewModel {
 
+	private enum Constant {
+		static let unauthorizedCode = 401
+	}
+
+	enum FetchMethod {
+		case localStorage
+		case server
+	}
+
 	private var allTasks: [TaskResponse] = []
+	private var error: ErrorResponse?
+
 	@Published private(set) var tasks: [TaskResponse] = []
 	@Published private(set) var errorMessage: String?
 
@@ -32,9 +43,30 @@ final class TasksViewModel {
 		}
 	}
 
-	private func forceLogOut() {
-		KeychainManager.shared.removeToken()
-		ControllerManager.shared.switchRoot(screen: .login)
+	private func getLocallyStoredTasks() {
+		let locallyStoredTasks = LocalStorageManager.shared.getTasks()
+
+		if locallyStoredTasks.isEmpty {
+			fetchTasks()
+		} else {
+			allTasks = locallyStoredTasks
+			tasks = locallyStoredTasks
+		}
+	}
+
+	private func fetchTasks() {
+		let taskService = TaskService()
+		taskService.getTasks { [weak self] response in
+			switch response {
+			case .success(let tasks):
+				self?.allTasks = tasks
+				self?.tasks = tasks
+				LocalStorageManager.shared.save(tasks: tasks)
+			case .failure(let error):
+				self?.error = error as? ErrorResponse
+				self?.errorMessage = error.localizedDescription
+			}
+		}
 	}
 
 	// MARK: - Public
@@ -49,19 +81,19 @@ final class TasksViewModel {
 		}
 	}
 
-	func getTasks() {
-		let taskService = TaskService()
-		taskService.getTasks { [weak self] response in
-			switch response {
-			case .success(let tasks):
-				self?.allTasks = tasks
-				self?.tasks = tasks
-			case .failure(let error):
-				if let error = error as? ErrorResponse, error.error.code == 401 {
-					self?.forceLogOut()
-				}
-				self?.errorMessage = error.localizedDescription
-			}
+	func getTasks(method: FetchMethod) {
+		switch method {
+		case .localStorage:
+			getLocallyStoredTasks()
+		case .server:
+			fetchTasks()
+		}
+	}
+
+	func handleError() {
+		if error?.error.code == Constant.unauthorizedCode {
+			UserManager.shared.deauthenticate()
+			ControllerManager.shared.switchRoot(screen: .login)
 		}
 	}
 

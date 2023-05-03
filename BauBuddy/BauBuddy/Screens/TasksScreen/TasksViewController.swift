@@ -13,18 +13,18 @@ final class TasksViewController: UIViewController {
 	@IBOutlet private weak var tableView: UITableView!
 	@IBOutlet private weak var searchBar: UISearchBar!
 
+	private let refreshControl = UIRefreshControl()
 	private var cancellables: [AnyCancellable] = []
 	private let viewModel = TasksViewModel()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		searchBar.delegate = self
-
 		viewModel.$tasks
 			.receive(on: DispatchQueue.main)
 			.sink { [weak self] _ in
 				self?.tableView.reloadData()
+				self?.refreshControl.endRefreshing()
 			}
 			.store(in: &cancellables)
 
@@ -37,15 +37,34 @@ final class TasksViewController: UIViewController {
 			}
 			.store(in: &cancellables)
 
-		viewModel.getTasks()
+		viewModel.getTasks(method: .localStorage)
+		setupPullToRefresh()
 	}
 
 	// MARK: - Private
 
+	private func setupPullToRefresh() {
+		refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+		tableView.refreshControl = refreshControl
+	}
+
+	@objc private func refresh() {
+		viewModel.getTasks(method: .server)
+	}
+
 	private func showAlert(message: String) {
 		let alert = UIAlertController(title: "Tasks Failure", message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+		alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+			self?.refreshControl.endRefreshing()
+			self?.viewModel.handleError()
+		})
 		self.present(alert, animated: true, completion: nil)
+	}
+
+	// MARK: - IBAction
+
+	@IBAction private func tapToDimiss(_ sender: UITapGestureRecognizer) {
+		view.endEditing(true)
 	}
 }
 

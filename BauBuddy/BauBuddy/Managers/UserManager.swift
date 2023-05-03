@@ -15,6 +15,8 @@ final class UserManager {
 	static let shared = UserManager()
 	private init() {}
 
+	// MARK: - Public
+
 	func getUserInfo() -> UserInfo? {
 		guard let data = UserDefaults.standard.data(forKey: Constant.userInfoKey) else {
 			return nil
@@ -22,9 +24,26 @@ final class UserManager {
 		return try? JSONDecoder().decode(UserInfo.self, from: data)
 	}
 
-	func setUserInfo(_ userInfo: UserInfo) {
+	func authenticate(response: LoginResponse) {
+		KeychainManager.shared.setToken(token: response.oauth.accessToken)
+		setUserInfo(response.userInfo)
+	}
+
+	func deauthenticate() {
+		LocalStorageManager.shared.clear()
+		KeychainManager.shared.removeToken()
+		removeUserInfo()
+	}
+
+	// MARK: - Private
+
+	private func setUserInfo(_ userInfo: UserInfo) {
 		if let data = try? JSONEncoder().encode(userInfo) {
 			UserDefaults.standard.set(data, forKey: Constant.userInfoKey)
 		}
+	}
+
+	private func removeUserInfo() {
+		UserDefaults.standard.set(nil, forKey: Constant.userInfoKey)
 	}
 }

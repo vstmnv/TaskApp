@@ -59,19 +59,20 @@ final class APIManager {
 
 		run(request: request) { data, error in
 			if let error = error {
+				// Server Error
 				completion(.failure(error))
 			} else if let data = data {
 				do {
 					let decoded = try JSONDecoder().decode(O.self, from: data)
 					completion(.success(decoded))
 				} catch {
-					do {
-						let decodedError = try JSONDecoder().decode(ErrorResponse.self, from: data)
+					if let decodedError = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
+						// Decoded ErrorResponse
 						completion(.failure(decodedError))
-					} catch {
+					} else {
+						// Decoding O.self Error
 						completion(.failure(error))
 					}
-					completion(.failure(error))
 				}
 			} else {
 				completion(.failure(InternalError()))

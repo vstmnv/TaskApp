@@ -25,7 +25,7 @@ class LoginViewModel: ObservableObject {
 		loginService.login(username: username, password: password) { [weak self] result in
 			switch result {
 			case .success(let loginResponse):
-				KeychainManager.shared.setToken(token: loginResponse.oauth.accessToken)
+				UserManager.shared.authenticate(response: loginResponse)
 				ControllerManager.shared.switchRoot(screen: .home)
 			case .failure(let error):
 				self?.errorMessage = error.localizedDescription

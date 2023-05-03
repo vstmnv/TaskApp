@@ -39,7 +39,7 @@ final class ProfileViewModel {
 	// MARK: - Public
 
 	func logOut() {
-		KeychainManager.shared.removeToken()
+		UserManager.shared.deauthenticate()
 		ControllerManager.shared.switchRoot(screen: .login)
 	}
 }
