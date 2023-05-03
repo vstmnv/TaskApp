@@ -123,13 +123,32 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j5-tq-6as">
+                                        <rect key="frame" x="286" y="51" width="92" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="d8g-Kf-Xjr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="qrcode.viewfinder" catalog="system" imagePlacement="leading" title="Scan" imagePadding="4" cornerStyle="capsule">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="scanQRCode:" destination="UgB-Rp-GCf" eventType="touchUpInside" id="w4f-C7-RW9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6j5-tq-6as" secondAttribute="trailing" constant="12" id="GVF-FM-7w6"/>
                                     <constraint firstItem="uWD-HI-f2c" firstAttribute="leading" secondItem="zYm-Rs-eSi" secondAttribute="leading" constant="8" id="YJj-SE-OyI"/>
                                     <constraint firstItem="uWD-HI-f2c" firstAttribute="top" secondItem="zYm-Rs-eSi" secondAttribute="top" constant="60" id="bFm-Zh-Wpf"/>
                                     <constraint firstAttribute="bottom" secondItem="uWD-HI-f2c" secondAttribute="bottom" constant="16" id="fFX-ZP-d75"/>
                                     <constraint firstAttribute="trailing" secondItem="uWD-HI-f2c" secondAttribute="trailing" constant="8" id="n3C-NK-WbL"/>
+                                    <constraint firstAttribute="bottom" secondItem="6j5-tq-6as" secondAttribute="bottom" constant="12" id="nSc-Jv-oi9"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kzJ-iz-d9t">
@@ -182,6 +201,7 @@
         <image name="building.columns.circle" catalog="system" width="128" height="123"/>
         <image name="doc.circle" catalog="system" width="128" height="123"/>
         <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
+        <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

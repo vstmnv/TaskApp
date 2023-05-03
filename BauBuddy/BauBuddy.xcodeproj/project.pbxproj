@@ -42,6 +42,7 @@
 		AECEBB712A017D7B00047F5B /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB702A017D7B00047F5B /* TabBar.storyboard */; };
 		AED096242A02640100293A16 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED096232A02640100293A16 /* UserManager.swift */; };
 		AED096272A02B79000293A16 /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED096262A02B79000293A16 /* LocalStorageManager.swift */; };
+		AEDD69BB2A02C88300DE8A28 /* SwiftQRCodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = AEDD69BA2A02C88300DE8A28 /* SwiftQRCodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECEBB5D2A01746500047F5B /* KeychainAccess in Frameworks */,
+				AEDD69BB2A02C88300DE8A28 /* SwiftQRCodeScanner in Frameworks */,
 				AE7FB83C2A0191ED00BB9E23 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +238,7 @@
 			packageProductDependencies = (
 				AECEBB5C2A01746500047F5B /* KeychainAccess */,
 				AE7FB83B2A0191ED00BB9E23 /* RswiftLibrary */,
+				AEDD69BA2A02C88300DE8A28 /* SwiftQRCodeScanner */,
 			);
 			productName = BauBuddy;
 			productReference = AE8E65972A01109E00DFB1A9 /* BauBuddy.app */;
@@ -268,6 +271,7 @@
 			packageReferences = (
 				AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AE7FB83A2A0191ED00BB9E23 /* XCRemoteSwiftPackageReference "R" */,
+				AEDD69B92A02C88300DE8A28 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
 			);
 			productRefGroup = AE8E65982A01109E00DFB1A9 /* Products */;
 			projectDirPath = "";
@@ -488,6 +492,7 @@
 				DEVELOPMENT_TEAM = H87DT32ZGT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BauBuddy/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs permission to use your camera in order to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginScreen;
@@ -518,6 +523,7 @@
 				DEVELOPMENT_TEAM = H87DT32ZGT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BauBuddy/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs permission to use your camera in order to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LoginScreen;
@@ -576,6 +582,14 @@
 				version = 4.2.2;
 			};
 		};
+		AEDD69B92A02C88300DE8A28 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vinodiOS/SwiftQRCodeScanner.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -592,6 +606,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AECEBB5B2A01746400047F5B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		AEDD69BA2A02C88300DE8A28 /* SwiftQRCodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEDD69B92A02C88300DE8A28 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */;
+			productName = SwiftQRCodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

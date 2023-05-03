@@ -6,7 +6,9 @@
 //
 
 import UIKit
+import AVKit
 import Combine
+import SwiftQRCodeScanner
 
 final class TasksViewController: UIViewController {
 
@@ -53,7 +55,7 @@ final class TasksViewController: UIViewController {
 	}
 
 	private func showAlert(message: String) {
-		let alert = UIAlertController(title: "Tasks Failure", message: message, preferredStyle: .alert)
+		let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
 			self?.refreshControl.endRefreshing()
 			self?.viewModel.handleError()
@@ -63,8 +65,39 @@ final class TasksViewController: UIViewController {
 
 	// MARK: - IBAction
 
+	@IBAction private func scanQRCode(_ sender: UIButton) {
+		guard AVCaptureDevice.authorizationStatus(for: .video) == .authorized else {
+			showAlert(message: "Please go to the BauBuddy app's settings and allow Camera usage in order to scan for QR codes.")
+			return
+		}
+
+		let scannerController = QRCodeScannerController(qrScannerConfiguration: .init(readQRFromPhotos: false))
+		scannerController.delegate = self
+
+		present(scannerController, animated: true, completion: nil)
+	}
+
 	@IBAction private func tapToDimiss(_ sender: UITapGestureRecognizer) {
 		view.endEditing(true)
+	}
+}
+
+// MARK: - QRScannerCodeDelegate
+
+extension TasksViewController: QRScannerCodeDelegate {
+	func qrScanner(_ controller: UIViewController, scanDidComplete result: String) {
+		searchBar.text = result
+		viewModel.searchTasks(searchText: result)
+	}
+
+	func qrScannerDidFail(_ controller: UIViewController, error: SwiftQRCodeScanner.QRCodeError) {
+		dismiss(animated: true) { [weak self] in
+			self?.showAlert(message: error.localizedDescription)
+		}
+	}
+
+	func qrScannerDidCancel(_ controller: UIViewController) {
+		dismiss(animated: true)
 	}
 }
 
