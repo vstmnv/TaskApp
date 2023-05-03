@@ -8,27 +8,27 @@
 import Foundation
 
 final class APIManager {
-	
+
 	private enum Constant {
 		static let authorizationHeader = "Authorization"
 		static let contentTypeKey = "Content-Type"
 		static let contentType = "application/json"
 	}
-	
+
 	enum HTTPMethod: String {
 		case get
 		case post
 		case put
 		case delete
-		
+
 		var value: String {
 			return self.rawValue.uppercased()
 		}
 	}
-	
+
 	private let session = URLSession(configuration: .default)
 	private var dataTask: URLSessionDataTask?
-	
+
 	func run<I: Encodable, O: Decodable>(
 		request: APIRequest<I, O>,
 		input: I? = nil,
@@ -41,13 +41,13 @@ final class APIManager {
 			completion(.failure(InternalError()))
 			return
 		}
-		
+
 		let urlWithPathAndQuery = url.appending(path: request.path)
 		var request = URLRequest(url: urlWithPathAndQuery)
 		request.httpMethod = httpMethod.value
 		request.setValue(KeychainManager.shared.getToken() ?? accessToken, forHTTPHeaderField: Constant.authorizationHeader)
 		request.setValue(Constant.contentType, forHTTPHeaderField: Constant.contentTypeKey)
-		
+
 		if let input = input {
 			do {
 				request.httpBody = try JSONEncoder().encode(input)
@@ -56,7 +56,7 @@ final class APIManager {
 				return
 			}
 		}
-		
+
 		run(request: request) { data, error in
 			if let error = error {
 				completion(.failure(error))
@@ -77,7 +77,7 @@ final class APIManager {
 				completion(.failure(InternalError()))
 			}
 		}
-		
+
 		func run(request: URLRequest, completion: @escaping (Data?, Error?) -> Void) {
 			dataTask?.cancel()
 			dataTask = session.dataTask(with: request) { data, _, error in

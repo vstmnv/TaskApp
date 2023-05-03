@@ -19,6 +19,8 @@ final class TasksViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		searchBar.delegate = self
+
 		viewModel.$tasks
 			.receive(on: DispatchQueue.main)
 			.sink { [weak self] _ in
@@ -44,6 +46,14 @@ final class TasksViewController: UIViewController {
 		let alert = UIAlertController(title: "Tasks Failure", message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
 		self.present(alert, animated: true, completion: nil)
+	}
+}
+
+// MARK: - UISearchBarDelegate
+
+extension TasksViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		viewModel.searchTasks(searchText: searchText)
 	}
 }
 

@@ -40,6 +40,7 @@
 		AECEBB6D2A017A2A00047F5B /* ProfileScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB6C2A017A2A00047F5B /* ProfileScreen.storyboard */; };
 		AECEBB6F2A017CE400047F5B /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECEBB6E2A017CE400047F5B /* TaskService.swift */; };
 		AECEBB712A017D7B00047F5B /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECEBB702A017D7B00047F5B /* TabBar.storyboard */; };
+		AED096242A02640100293A16 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED096232A02640100293A16 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		AECEBB6C2A017A2A00047F5B /* ProfileScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileScreen.storyboard; sourceTree = "<group>"; };
 		AECEBB6E2A017CE400047F5B /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		AECEBB702A017D7B00047F5B /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		AED096232A02640100293A16 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			children = (
 				AECEBB592A0172C000047F5B /* KeychainManager.swift */,
 				AE7FB8362A018AAB00BB9E23 /* ControllerManager.swift */,
+				AED096232A02640100293A16 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				AE8E65B52A01160800DFB1A9 /* APIManager.swift in Sources */,
 				AE8E65B92A0116D700DFB1A9 /* LoginService.swift in Sources */,
 				AE7FB8392A01905500BB9E23 /* EmptyInput.swift in Sources */,
+				AED096242A02640100293A16 /* UserManager.swift in Sources */,
 				AECEBB622A0179DE00047F5B /* TasksViewController.swift in Sources */,
 				AE8E65B22A0115D200DFB1A9 /* APIRequest.swift in Sources */,
 				AECEBB5A2A0172C000047F5B /* KeychainManager.swift in Sources */,

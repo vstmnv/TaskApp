@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserInfo: Decodable {
+struct UserInfo: Codable {
 	let personalNo: Int
 	let firstName: String
 	let lastName: String
